@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure File Sharing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .api-info {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Secure File Sharing API</h1>
+    
+    <div class="api-info">
+        <h2>API Documentation</h2>
+        <p>This is a RESTful API for secure file sharing between Operations and Client users.</p>
+        
+        <h3>Authentication</h3>
+        <ul>
+            <li><code>POST /auth/signup</code> - Register a new client user</li>
+            <li><code>GET /auth/verify/{token}</code> - Verify email address</li>
+            <li><code>POST /auth/login</code> - Login for both Ops and Client users</li>
+        </ul>
+        
+        <h3>Files</h3>
+        <ul>
+            <li><code>POST /file/upload</code> - Upload files (Ops users only)</li>
+            <li><code>GET /file/list</code> - List all files (Client users only)</li>
+            <li><code>GET /file/download/{file_id}</code> - Get download link (Client users only)</li>
+            <li><code>GET /file/download-file/{token}</code> - Download file using token (Client users only)</li>
+        </ul>
+    </div>
+</body>
+</html>
